@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 12px;
+    font-size: 22px;
+    background: #fff;
+}
+table{
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    padding: 0 12px 6px;
+    text-align: center;
+}
+th,td{
+    padding: 26px 20px;
+    border: 1px solid #e5e7eb;
+}
+th {
+    background-color: #f8fafc;
+    font-size: 26px;
+    font-weight: bold;
+}
+th.destaque {
+    background-color: #2563eb;
+    color: #fff;
+}
+.preco {
+    color: #000;
+}
+
+.preco strong {
+    color: #2563eb;
+    font-size: 32px;
+}
