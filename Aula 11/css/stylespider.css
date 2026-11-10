@@ -1,0 +1,638 @@
+:root {
+    --spider-red: #e32636;
+    --spider-red-dark: #a91426;
+    --spider-blue: #168bd2;
+    --spider-light-blue: #76c9ff;
+    --spider-dark: #050a13;
+    --spider-panel: #0b1422;
+    --spider-border: #243b54;
+    --spider-white: #f3f5f9;
+    --spider-gray: #aab6c5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--spider-dark);
+    color: var(--spider-white);
+    overflow-x: hidden;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+#corpo {
+    width: 100%;
+    max-width: 1450px;
+    margin: auto;
+    padding: 55px 5% 80px;
+}
+
+.cabecalho-spider #pagina-home {
+    position: relative;
+    min-height: 560px;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(3, 7, 15, 0.12) 0%,
+            rgba(3, 7, 15, 0.15) 40%,
+            #050a13 100%
+        ),
+        linear-gradient(
+            to right,
+            rgba(3, 7, 15, 0.85),
+            rgba(3, 7, 15, 0.10)
+        ),
+        url("../img/hmbanner.jpg");
+
+    background-size: cover;
+    background-position: center 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.cabecalho-spider #pagina-home::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            circle at 75% 35%,
+            rgba(227, 38, 54, 0.18),
+            transparent 35%
+        );
+}
+
+.cabecalho-spider .categoria {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    padding: 22px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(
+        to bottom,
+        rgba(3, 7, 15, 0.75),
+        transparent
+    );
+}
+
+.cabecalho-spider .logo {
+    width: 125px;
+    height: auto;
+    object-fit: contain;
+}
+
+.cabecalho-spider .menu-principal ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.cabecalho-spider .menu-principal a {
+    color: #f3f5f9;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.cabecalho-spider .menu-principal a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -8px;
+    background: var(--spider-red);
+    transition: 0.3s;
+}
+
+.cabecalho-spider .menu-principal a:hover {
+    color: var(--spider-red);
+}
+
+.cabecalho-spider .menu-principal a:hover::after {
+    width: 100%;
+}
+
+.cabecalho-spider .menu-principal a.pagina-atual {
+    color: #ff6672;
+}
+
+.cabecalho-spider .menu-principal a.pagina-atual::after {
+    width: 100%;
+}
+
+/* CABEÇALHO DO FILME E CLASSIFICAÇÃO (Estilo compacto igual ao Jurassic Park) */
+.cabecalho-filme {
+    margin-bottom: 35px;
+}
+
+.titulo-filme {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.linha-decorativa {
+    width: 5px;
+    height: 48px;
+    background: var(--spider-red);
+    box-shadow: 0 0 15px rgba(227, 38, 54, 0.5);
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.info span {
+    padding: 10px 18px;
+    background: #0a1423;
+    border: 1px solid var(--spider-border);
+    border-radius: 5px;
+    color: #dce5ef;
+    font-size: 13px;
+}
+
+/* Selo de classificação idêntico ao Jurassic Park */
+.info .classificacao {
+    background: #ffcc00;
+    border-color: #ffcc00;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.numero-secao {
+    display: block;
+    color: #ff6470;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.texto-sinopse h2,
+.trailer h2,
+.elenco h2,
+.titulo-secao h2 {
+    position: relative;
+    color: var(--spider-light-blue);
+    font-size: 21px;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.texto-sinopse h2::after,
+.trailer h2::after,
+.elenco h2::after,
+.titulo-secao h2::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 2px;
+    margin-top: 10px;
+    background: var(--spider-red);
+}
+
+/* SINOPSE */
+.sinopse {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 25px;
+    margin-bottom: 55px;
+}
+
+.texto-sinopse {
+    position: relative;
+    padding: 32px;
+    background: linear-gradient(135deg, #0c1828, #080e19);
+    border: 1px solid var(--spider-border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.texto-sinopse::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--spider-red), transparent);
+}
+
+.texto-sinopse p {
+    color: #cbd5e2;
+    font-size: 13px;
+    line-height: 2;
+    text-align: justify;
+    margin-bottom: 13px;
+}
+
+.frase-filme {
+    margin-top: 25px;
+    padding-left: 15px;
+    border-left: 2px solid var(--spider-red);
+    color: #ff6975;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.poster {
+    position: relative;
+    min-height: 320px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--spider-border);
+    box-shadow: 0 0 30px rgba(22, 139, 210, 0.12);
+}
+
+.poster img {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.poster:hover img {
+    transform: scale(1.05);
+}
+
+.legenda-poster {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    color: white;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+/* TRAILER E ELENCO */
+.trailer-elenco {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 35px;
+    margin-bottom: 75px;
+    align-items: start;
+}
+
+.trailer,
+.elenco {
+    min-width: 0;
+}
+
+.video-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #31516f;
+    box-shadow: 0 0 25px rgba(22, 139, 210, 0.15);
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.legenda-trailer {
+    color: var(--spider-gray);
+    font-size: 11px;
+    margin-top: 12px;
+}
+
+/* ELENCO */
+.lista-elenco {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+
+.ator {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 10px 15px;
+    background: linear-gradient(100deg, #0d192a, #080f1b);
+    border: 1px solid #253c55;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.ator:hover {
+    border-color: var(--spider-red);
+    background: #111e30;
+    transform: translateX(5px);
+    box-shadow: 0 0 15px rgba(227, 38, 54, 0.1);
+}
+
+.ator img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #46617c;
+    transition: 0.3s;
+}
+
+.ator:hover img {
+    border-color: var(--spider-red);
+}
+
+.ator div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.ator strong {
+    color: white;
+    font-size: 12px;
+}
+
+.ator span:not(.ator-numero) {
+    color: var(--spider-light-blue);
+    font-size: 10px;
+}
+
+.ator-numero {
+    margin-left: auto;
+    color: #63748b;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* CONTINUAÇÕES */
+.continuacoes {
+    margin-bottom: 75px;
+}
+
+.titulo-secao {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.titulo-secao h2 {
+    margin-bottom: 0;
+}
+
+.titulo-secao p {
+    color: var(--spider-gray);
+    font-size: 11px;
+}
+
+.lista-continuacoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.filme {
+    position: relative;
+    height: 280px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--spider-border);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.filme img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.filme:hover {
+    border-color: var(--spider-red);
+    transform: translateY(-5px);
+}
+
+.filme:hover img {
+    transform: scale(1.07);
+}
+
+.filme-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    background: linear-gradient(
+        to top,
+        rgba(2, 5, 12, 0.95),
+        rgba(2, 5, 12, 0.1)
+    );
+}
+
+.filme-overlay span {
+    color: #ff6570;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.filme-overlay h3 {
+    color: white;
+    font-size: 23px;
+    margin: 8px 0;
+}
+
+.filme-overlay p {
+    color: #d0d9e5;
+    font-size: 11px;
+}
+
+/* CRÉDITOS */
+.creditos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 950px;
+    margin: auto;
+}
+
+.credito {
+    text-align: center;
+    padding: 25px 15px;
+    background: #0b1524;
+    border: 1px solid #294660;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.credito:hover {
+    border-color: var(--spider-red);
+    box-shadow: 0 0 20px rgba(227, 38, 54, 0.1);
+    transform: translateY(-4px);
+}
+
+.credito span {
+    display: block;
+    color: var(--spider-light-blue);
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.credito h3 {
+    color: white;
+    font-size: 13px;
+}
+
+/* RODAPÉ */
+.rodape-spider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 5%;
+    background: #03070d;
+    border-top: 1px solid #20334a;
+}
+
+.rodape-spider p {
+    color: #8593a5;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.rodape-spider strong {
+    color: var(--spider-red);
+}
+
+.rodape-spider a {
+    color: var(--spider-light-blue);
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.rodape-spider a:hover {
+    color: white;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 950px) {
+    .cabecalho-spider .menu-principal ul {
+        gap: 15px;
+    }
+    .cabecalho-spider .menu-principal a {
+        font-size: 11px;
+    }
+    .sinopse {
+        grid-template-columns: 1.4fr 1fr;
+    }
+    .trailer-elenco {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    #corpo {
+        padding: 35px 5% 55px;
+    }
+    .cabecalho-spider #pagina-home {
+        min-height: 530px;
+        background-position: 60% center;
+    }
+    .cabecalho-spider .categoria {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 4%;
+    }
+    .cabecalho-spider .logo {
+        width: 100px;
+    }
+    .cabecalho-spider .menu-principal {
+        width: 100%;
+    }
+    .cabecalho-spider .menu-principal ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .cabecalho-spider .menu-principal a {
+        font-size: 9px;
+    }
+    .sinopse {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .texto-sinopse {
+        padding: 23px;
+    }
+    .texto-sinopse p {
+        font-size: 12px;
+    }
+    .poster,
+    .poster img {
+        min-height: 250px;
+        max-height: 350px;
+    }
+    .trailer-elenco {
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+    .ator {
+        padding: 9px 12px;
+    }
+    .ator img {
+        width: 43px;
+        height: 43px;
+    }
+    .ator strong {
+        font-size: 11px;
+    }
+    .ator span:not(.ator-numero) {
+        font-size: 9px;
+    }
+    .titulo-secao {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .lista-continuacoes {
+        grid-template-columns: 1fr;
+    }
+    .filme {
+        height: 230px;
+    }
+    .creditos {
+        grid-template-columns: 1fr;
+    }
+    .rodape-spider {
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
+    }
+}

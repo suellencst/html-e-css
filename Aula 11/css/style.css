@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    width: 300px;
+}
+.categoria{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*Distribui os elementos igualmente no espaço disponível*/
+    padding-top: 420px;
+}
+.menu-principal ul{
+    list-style: none; /*Remove os marcadores da lista*/
+}
+.menu-principal ul li{
+    display: inline-block; /*Exibe os itens da lista em linha*/
+}
+.menu-principal ul li a{
+    color:cornsilk;
+    text-decoration: none; /*Remove o sublinhado dos links*/
+    text-transform: uppercase; /*Transforma o texto em maiúsculas*/
+    padding: 5px 20px; /*Adiciona espaçamento interno aos links*/
+    border: 1px solid transparent; /*Adiciona uma borda transparente para manter o tamanho dos links consistente*/
+    font-size: 20px; /*Define o tamanho da fonte dos links*/
+   
+}
+.menu-principal ul li a:hover{/*Transição de cor ao passar o mouse sobre os links*/
+    background-color:rgb(223, 194, 66); /*Altera a cor de fundo ao passar o mouse*/
+    color:rgb(0, 0, 0); /*Altera a cor do texto ao passar o mouse*/
+    transition: 0.06s ease; /*Adiciona uma transição suave ao passar o mouse sobre os links*/
+}
+#pagina-home{
+    height: 613px;
+    background: linear-gradient(rgba(224, 184, 74, 0.479), rgba(19, 18, 18, 0.452)), url(../img/banner.jpg); /*Define a imagem de fundo do banner*/
+    background-size: cover;
+    background-position: center;
+}

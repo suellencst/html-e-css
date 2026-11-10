@@ -1,0 +1,108 @@
+#corpo{
+    padding: 30px 40px;
+}
+#corpo h1{
+    background-color: rgba(255, 255, 255, 0.85);
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 30px 40px;
+    border-radius: 12px;
+    
+}
+.info{
+    display: flex;
+    flex-wrap: wrap; /*Permite que os elementos filhos quebrem para a próxima linha se não houver espaço suficiente*/
+    align-items: center;
+    gap: 20px;
+    font-size: 24px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+}
+.classificacao{
+display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #00a651;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border-radius: 6px;
+    border: 1px solid #000000;
+}
+.info span:not(.classificacao){
+    border: 1px solid #000;
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+.sinopse{
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+.texto-sinopse{
+    flex: 1;
+    font-size: 18px;
+}
+.texto-sinopse h2{
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.texto-sinopse p{
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+.imagem-filme{
+    flex: 1;
+    min-width: 0;
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.trailer{
+    text-align: center;
+    margin-bottom: 20px
+    
+}
+
+.trailer h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.trailer iframe{
+    width: 100%;
+    max-width: 640px;
+    height: 360px;
+    border: none;
+}
+#madagascar-corpo{
+    background: linear-gradient(rgba(255, 255, 255, 0.445), rgba(255, 255, 255, 0.616)), url(../img/imagemfundo.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 30px 40px;
+}
+footer{
+    background-color: #ffffff00;
+    color: #ffffff00;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+}
+
+footer strong{
+    color: #d4af37;
+}
+.duracao:hover, .genero:hover, .ano:hover{
+    background-color: rgb(223, 194, 66);
+    color: rgb(255, 255, 255);
+    transition: 0.06s ease;
+}
+ 

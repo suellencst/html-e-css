@@ -1,0 +1,199 @@
+body{
+    background-color: #000;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/fundojp.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #f2f2f2;
+}
+
+#corpo{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    color: #f2f2f2;
+}
+
+    main h1{
+    font-size: 44px;
+    margin-bottom: 15px;
+    color: #f3d2d2;
+    text-shadow:
+        0 0 4px #f01c11,
+        0 0 12px #f51b0f;
+}
+
+.info{
+    display: flex;
+    flex-wrap: wrap; /*Permite que os elementos filhos quebrem para a próxima linha se não houver espaço suficiente*/
+    align-items: center;
+    gap: 20px;
+    font-size: 24px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+}
+.classificacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #f5b800;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border-radius: 6px;
+    border: 1px solid #000000;
+}
+.info span:not(.classificacao){
+    border: 1px solid #000;
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+.sinopse{
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+.texto-sinopse{
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 22px;
+}
+.texto-sinopse h2{
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.texto-sinopse p{
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    
+}
+
+.imagem-filme{
+    flex: 1;
+    min-width: 0;
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.trailer{
+    text-align: center;
+    margin-bottom: 20px
+    
+}
+.trailer h2{
+    font-size: 35px;
+    margin-bottom: 15px;
+    color: #f3d2d2;
+    text-shadow:
+     0 0 4px #f01c11,
+    0 0 12px #f51b0f;
+}
+.trailer iframe{
+    width: 100%;
+    max-width: 640px;
+    height: 360px;
+    border: none;
+}
+#jp-corpo{
+    background: linear-gradient(rgba(29, 29, 29, 0.493), rgba(39, 38, 38, 0.473)), url(../img/jpbanner3.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 30px 40px;
+}
+
+
+footer{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px 30px;
+    margin-top: 30px;
+}
+
+/* Fita de alerta amarela e preta */
+.faixa-alerta{
+    height: 14px;
+    margin: 0 -20px 25px;
+    background: repeating-linear-gradient(
+        -45deg,
+        #ffcc00,
+        #ffcc00 15px,
+        #000 15px,
+        #000 30px
+    );
+}
+
+.frase-footer{
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #e8281e;
+    margin-bottom: 25px;
+}
+
+/* Cartões de crédito */
+.creditos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.credito{
+    width: 260px;
+    padding: 18px;
+    background-color: #111;
+    border: 1px solid #e8281e;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.credito:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 0 15px #e8281e;
+}
+
+.credito strong{
+    display: block;
+    color: #ffcc00;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.credito p{
+    font-size: 17px;
+    line-height: 1.5;
+}
+.duracao:hover, .genero:hover, .ano:hover{
+    background-color:#c59811;
+    color: rgb(255, 255, 255);
+    transition: 0.06s ease;
+}
+.logo-final{
+    width: 170px;
+    height: 170px;
+    margin: 30px auto 0;
+    overflow: hidden;
+    transition: transform 0.4s, filter 0.4s;
+}
+
+.logo-final img{
+    display: block;
+    width: 538px;
+    max-width: none;
+    margin-left: -184px;
+    margin-top: -73px;
+}
