@@ -1,0 +1,170 @@
+body{
+    background-color: #1a1512;
+    background-image:
+        radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.65) 100%),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0, rgba(255, 255, 255, 0.04) 2px, transparent 2px, transparent 46px);
+    background-attachment: fixed;
+    color: #f4ecd8;
+}
+
+#home{
+    padding: 40px 40px 20px;
+    box-sizing: border-box;
+}
+
+/* ===== Boas-vindas ===== */
+.boas-vindas{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.boas-vindas h1{
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.boas-vindas p{
+    font-size: 19px;
+    color: #d9cfb8;
+}
+
+/* ===== Letreiro com lâmpadas piscando ===== */
+.letreiro{
+    position: relative;
+    max-width: 520px;
+    margin: 0 auto 50px;
+    padding: 30px 20px;
+    text-align: center;
+    background-color: #0d0b09;
+    border: 5px solid #d4af37;
+    border-radius: 6px;
+}
+
+.letreiro h2{
+    font-family: Impact, "Arial Black", sans-serif;
+    font-size: 42px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #ffe9a6;
+    margin: 0;
+}
+
+.letreiro::before,
+.letreiro::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background-image: radial-gradient(circle, #ffe9a6 3px, transparent 4px);
+    background-size: 24px 12px;
+    background-repeat: repeat-x;
+    background-position: center;
+    animation: piscar 1.2s steps(1) infinite;
+}
+
+.letreiro::before{
+    top: 9px;
+}
+
+.letreiro::after{
+    bottom: 9px;
+    animation-delay: 0.6s;
+}
+
+@keyframes piscar{
+    0%{ opacity: 1; }
+    50%{ opacity: 0.25; }
+}
+
+/* ===== Cartazes na parede ===== */
+.parede{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 50px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0 30px;
+}
+
+.cartaz{
+    position: relative;
+    display: block;
+    padding: 12px 12px 14px;
+    background-color: #f4ecd8;
+    color: #2b2218;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.65);
+    transform: rotate(var(--giro, 0deg));
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.cartaz:nth-child(1){ --giro: -2deg; }
+.cartaz:nth-child(2){ --giro: 1.5deg; }
+.cartaz:nth-child(3){ --giro: -1deg; }
+.cartaz:nth-child(4){ --giro: 2deg; }
+
+/* Alfinete */
+.cartaz::before{
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin-left: -8px;
+    background: radial-gradient(circle at 35% 35%, #ff6a5c, #a3160c);
+    border-radius: 50%;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cartaz img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.cartaz p{
+    margin: 12px 0 0;
+    text-align: center;
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.cartaz strong{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.cartaz:hover{
+    transform: rotate(0deg) translateY(-10px) scale(1.03);
+    box-shadow: 0 18px 28px rgba(0, 0, 0, 0.8);
+}
+
+/* ===== Rodapé ===== */
+footer{
+    margin-top: 30px;
+    padding: 22px;
+    text-align: center;
+    background-color: #0d0b09;
+    border-top: 3px solid #d4af37;
+    color: #d9cfb8;
+    font-family: "Courier New", monospace;
+}
+
+/* ===== Celular ===== */
+@media (max-width: 700px){
+    #home{ padding: 30px 20px 10px; }
+
+    .boas-vindas h1{ font-size: 34px; }
+
+    .letreiro h2{
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+}

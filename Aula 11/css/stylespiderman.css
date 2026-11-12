@@ -1,0 +1,245 @@
+body{
+    background-color: #1b3a8a;
+    background-image: radial-gradient(#0f2566 2px, transparent 2px);
+    background-size: 18px 18px;
+    color: #fff;
+}
+
+/* ===== Conteúdo (tela toda) ===== */
+#corpo{
+    max-width: none;
+    width: auto;
+    margin: 0;
+    padding: 30px 40px;
+    box-sizing: border-box;
+}
+
+/* Título */
+main h1{
+    font-family: Impact, "Arial Black", sans-serif;
+    font-size: 58px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #e62429;
+    -webkit-text-stroke: 2px #000;
+    text-shadow: 4px 4px 0 #000;
+    margin-bottom: 18px;
+}
+
+main h2{
+    font-family: Impact, "Arial Black", sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffd400;
+    text-shadow: 2px 2px 0 #000;
+    margin: 0 0 12px;
+}
+
+/* ===== Linha de informações ===== */
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.info span:not(.classificacao){
+    background-color: #fff;
+    color: #111;
+    border: 3px solid #000;
+    padding: 5px 14px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 0 #000;
+    font-weight: bold;
+}
+
+.classificacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border: 3px solid #000;
+    border-radius: 6px;
+    box-shadow: 3px 3px 0 #000;
+}
+
+.classificacao.c12{
+    background-color: #f5b800;
+}
+
+/* ===== Sinopse + pôster ===== */
+.sinopse{
+    display: grid;
+    grid-template-columns: 1fr 460px;
+    gap: 30px;
+    align-items: stretch;
+    margin-bottom: 40px;
+}
+
+.sinopse > *{
+    margin: 0;
+}
+
+.texto-sinopse{
+    background-color: #fff;
+    color: #111;
+    border: 3px solid #000;
+    border-radius: 8px;
+    box-shadow: 6px 6px 0 #000;
+    padding: 20px 26px;
+}
+
+.texto-sinopse p{
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.texto-sinopse h2{
+    color: #e62429;
+    text-shadow: none;
+}
+
+.poster{
+    border: 3px solid #000;
+    border-radius: 8px;
+    box-shadow: 6px 6px 0 #000;
+    overflow: hidden;
+}
+
+.poster img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== Trailer + elenco ===== */
+.trailer-elenco{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.trailer iframe{
+    display: block;
+    width: 100%;
+    height: 380px;
+    border: 3px solid #000;
+    border-radius: 8px;
+    box-shadow: 6px 6px 0 #000;
+}
+
+/* ===== Elenco ===== */
+.lista-elenco{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ator{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 6px 14px 6px 6px;
+    background-color: #fff;
+    color: #111;
+    border: 3px solid #000;
+    border-radius: 40px;
+    box-shadow: 4px 4px 0 #000;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.ator:hover{
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px 0 #000;
+}
+
+.ator img{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #000;
+}
+
+.ator strong{
+    display: block;
+    font-size: 16px;
+}
+
+.ator span{
+    font-size: 14px;
+    color: #555;
+}
+
+/* ===== Rodapé ===== */
+footer{
+    background-color: #e62429;
+    border-top: 5px solid #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+.creditos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.credito{
+    width: 290px;
+    padding: 16px;
+    background-color: #fff;
+    color: #111;
+    border: 3px solid #000;
+    border-radius: 8px;
+    box-shadow: 5px 5px 0 #000;
+}
+
+.credito strong{
+    display: block;
+    font-family: Impact, "Arial Black", sans-serif;
+    font-weight: normal;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #e62429;
+    margin-bottom: 6px;
+}
+
+.credito p{
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+/* ===== Celular ===== */
+@media (max-width: 800px){
+    #corpo{ padding: 20px; }
+
+    main h1{ font-size: 40px; }
+
+    .sinopse,
+    .trailer-elenco{
+        grid-template-columns: 1fr;
+    }
+
+    .trailer iframe{ height: 220px; }
+}
