@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Formulário</title>
+</head>
+<body>
+
+
+    <div class="cabeçalho">
+
+    <h1>Formulário</h1>
+    <h2>Preencha os campos abaixo</h2>
+
+    </div>
+    
+    <div class="formulario">
+    <form action="" method="POST"> <!--POST / GET-->
+
+       
+        <div class="campo">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" size="40" required>
+        </div>
+
+        <div class="campo">
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Digite o nome da sua cidade" size="40" required>
+        </div>
+        
+        <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu melhor e-mail" size="40" required>
+        </div>
+
+        <div class="campo">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" size="10" required>
+        </div>
+        
+        <div class="campo">
+            <label for="data">Data de nascimento</label>
+            <input type="date" id="data" name="data" placeholder="Digite sua data de nascimento" size="10" required>
+        </div>
+
+        <div class="campo">
+            <label for="telefone">Telefone do contato</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(##) #####-####" size="10" required>
+        </div>
+
+        <div class="campo">
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado">
+                <option value="">Selecione um estado</option>
+                <option value="SP">São Paulo</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="CE">Ceará</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="titulo-campo">Turno de preferência</label>
+            <label class="opcao">
+                <input type="radio" name="turno" value="manha"> Manhã
+            </label>
+
+            <label class="opcao">
+                <input type="radio" name="turno" value="tarde"> Tarde
+            </label>
+
+            <label class="opcao">
+                <input type="radio" name="turno" value="noite"> Noite
+            </label>
+            </div>
+
+
+            <div class="campo">
+            <label for="titulo-campo">Áreas de interesse</label>
+            <label class="opcao">
+                <input type="checkbox" name="interessses" value="tecnologia"> Tecnologia
+            </label>
+
+            <label class="opcao">
+                <input type="checkbox" name="interessses" value="design"> Design
+            </label>
+
+            <label class="opcao">
+                <input type="checkbox" name="interessses" value="design"> Design
+            </label>
+
+            <label class="opcao">
+                <input type="checkbox" name="interessses" value="marketing"> Marketing
+            </label>
+            </div>
+
+            <div class="imagem">
+            <label for="imagem">Faça o upload de sua imagem:</label>
+            <input type="file" id="imagem" name="imagem" accept=".png, .jpg, .jpeg, image/png, image/jpeg">
+            </div>
+
+            <div class="campo">
+                <label for="obs">Observações</label>
+                <textarea id="obs" name="obs" rows="3" size="60" placeholder="Digite suas observações"></textarea>
+            </div>
+
+            <div class="botao">
+                <button class="button" type="submit">Enviar</button>
+            </div>
+            
+       
+
+    </form>
+    </div>
+
+    </body>
+</html>
