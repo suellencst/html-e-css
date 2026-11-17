@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="titulo">
+            <h1>Formulário de Cadastro</h1>
+        </div>
+
+        <form class="formulario" action="#" method="post">
+
+            <div class="campo">
+                <label for="nome">Nome e Sobrenome</label>
+                <div class="grupo">
+                    <div class="metade">
+                        <input type="text" id="nome" name="nome" required>
+                        <small>Nome</small>
+                    </div>
+                    <div class="metade">
+                        <input type="text" id="sobrenome" name="sobrenome" required>
+                        <small>Sobrenome</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="empresa">Empresa</label>
+                <div class="grupo">
+                    <input type="text" id="empresa" name="empresa">
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="email">Email</label>
+                <div class="grupo">
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="ddd">Telefone com DDD</label>
+                <div class="grupo">
+                    <div class="ddd">
+                        <input type="text" id="ddd" name="ddd" maxlength="2" required>
+                        <small>DDD</small>
+                    </div>
+                    <div class="telefone">
+                        <input type="tel" id="telefone" name="telefone" required>
+                        <small>Telefone</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="sexo">Sexo</label>
+                <div class="grupo">
+                    <select id="sexo" name="sexo" required>
+                        <option value="">--Selecione a Opção</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="iniciante">
+                <p>Você é iniciante?</p>
+                <label>
+                    <input type="radio" name="iniciante" value="sim"> Sim
+                </label>
+                <label>
+                    <input type="radio" name="iniciante" value="nao"> Não
+                </label>
+            </div>
+
+            <button type="submit">Enviar</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background-color: #555;
+    background-image: url("img/images.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    /* centraliza o container na horizontal e na vertical */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 550px;
+}
+
+/* ---------- Título azul com brilho vermelho ---------- */
+.titulo {
+    width: 100%;
+    background: #0000ff;
+    border: 3px solid #ff4d4d;
+    border-radius: 5px;
+    box-shadow: 0 0 12px #ff4d4d;
+    text-align: center;
+}
+
+.titulo h1 {
+    margin: 0;
+    padding: 8px 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* ---------- Cartão escuro semitransparente ---------- */
+.formulario {
+    width: 100%;
+    padding: 28px 22px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- Campos: rótulo à esquerda, campo à direita ---------- */
+.campo {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.campo > label {
+    width: 122px;
+    flex-shrink: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    padding-top: 3px;
+}
+
+.grupo {
+    display: flex;
+    gap: 8px;
+    flex: 1;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    border: 1px solid #222;
+    background: #fff;
+    padding: 6px;
+    font-size: 15px;
+}
+
+select {
+    background: #ddd;
+    border-radius: 3px;
+}
+
+/* ---------- Legendas pequenas ---------- */
+small {
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    color: #fff;
+}
+
+.metade {
+    flex: 1;
+}
+
+.ddd {
+    width: 100px;
+    margin-right: 22px;
+}
+
+.telefone {
+    flex: 1;
+}
+
+/* ---------- Pergunta com radios ---------- */
+.iniciante {
+    color: #fff;
+    margin-bottom: 22px;
+}
+
+.iniciante p {
+    margin: 0 0 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.iniciante label {
+    display: inline-block;
+    margin-right: 55px;
+    font-size: 19px;
+}
+
+.iniciante input {
+    margin-right: 4px;
+    transform: scale(1.3);
+}
+
+/* ---------- Botão ---------- */
+button {
+    width: 180px;
+    padding: 11px 0;
+    background: #3aaf9f;
+    color: #fff;
+    border: 1px solid #2a8f80;
+    border-radius: 10px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2f9a8b;
+}

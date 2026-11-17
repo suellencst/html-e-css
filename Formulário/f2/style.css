@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #3d3d3d;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.formulario {
+    background: #ecc84e;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    border-radius: 20px;
+}
+.campo {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    column-gap: 20px;
+    align-items: start;
+    margin-bottom: 20px;
+}
+.campo > label:first-child {
+    font-size: 11px;
+    font-weight: bold;
+    color: #222;
+    padding-top: 4px;
+}
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="tel"],
+.campo select,
+.campo textarea {
+    border: none;
+    padding: 6px;
+    font-size: 11px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="tel"] {
+    width: 140px;
+}
+
+.campo select {
+    width: 160px;
+    background: #efefef;
+}
+
+.campo textarea {
+    width: 100%;
+    max-width: 310px;
+}
+
+.opcao {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.opcao input {
+    margin: 0;
+}
+.botao {
+    margin-left: 170px;
+    margin-top: 30px;
+}
+
+.button {
+    background: #f0f0f0;
+    color: #777;
+    border: none;
+    padding: 10px 16px;
+    font-size: 11px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #fff;
+    color: #222;
+}

@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #444;
+    margin: 0;
+    padding: 20px 0;
+}
+
+
+.formulario {
+    background: #ffd9b3;
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 25px 25px 30px;
+}
+.cabecalho {
+    border-bottom: 1px solid #f0c9a0;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.cabecalho h1 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    color: #111;
+}
+
+.cabecalho p {
+    margin: 0;
+    font-size: 11px;
+    color: #222;
+    line-height: 1.4;
+}
+.campo {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+.campo > label {
+    width: 105px;
+    flex-shrink: 0;
+    font-size: 11px;
+    font-weight: bold;
+    color: #111;
+    padding-top: 4px;
+}
+
+.campo.vertical {
+    flex-direction: column;
+}
+
+.campo.vertical > label {
+    width: auto;
+    margin-bottom: 6px;
+}
+
+.grupo {
+    display: flex;
+    gap: 4px;
+    flex: 1;
+}
+
+.grupo.coluna {
+    flex-direction: column;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 5px;
+    font-size: 11px;
+}
+
+input.medio {
+    max-width: 212px;
+}
+
+select {
+    background: #efefef;
+    border-radius: 3px;
+    max-width: 110px;
+}
+small {
+    display: block;
+    margin-top: 3px;
+    font-size: 8px;
+    color: #c9a584;
+}
+
+.metade {
+    flex: 1;
+}
+
+.linha-completa {
+    width: 230px;
+    margin-bottom: 8px;
+}
+
+.duas-colunas {
+    display: flex;
+    gap: 6px;
+    width: 230px;
+    margin-bottom: 8px;
+}
+
+.telefone {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+}
+
+.telefone .codigo {
+    flex: 2;
+}
+
+.telefone .numero {
+    flex: 3;
+}
+
+.telefone .traco {
+    padding-top: 4px;
+    font-size: 11px;
+}
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+.captcha {
+    width: 110px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 6px;
+}
+
+.captcha-imagem {
+    height: 28px;
+    background: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 4px;
+}
+.botao {
+    margin: 25px 0 0 105px;
+}
+
+.botao button {
+    background: #f0f0f0;
+    color: #666;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    font-size: 11px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.botao button:hover {
+    background: #fff;
+    color: #111;
+}
+
+/* ---------- Aviso final ---------- */
+.aviso {
+    color: red;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 35px;
+}
