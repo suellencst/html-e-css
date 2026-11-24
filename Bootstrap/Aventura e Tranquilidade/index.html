@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" >
+    <title>Destino Brotas</title>
+</head>
+<body>
+    <header id="home" class="hero">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <img src="img/logo.png" alt="Logo Destino Brotas" class="logo">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="menu">
+          <ul class="navbar-nav gap-2">
+            <li class="nav-item"><a class="nav-link menu-link active" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link menu-link" href="#passeios">Passeios</a></li>
+            <li class="nav-item"><a class="nav-link menu-link" href="#precos">Preços</a></li>
+            <li class="nav-item"><a class="nav-link menu-link" href="#contato">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container hero-content text-center text-white">
+      <h1 class="fw-bold text-uppercase">Aventura e Tranquilidade</h1>
+      <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
+        <a href="#" class="btn btn-outline-light btn-hero text-uppercase fw-bold">Vídeo</a>
+        <a href="#passeios" class="btn btn-outline-light btn-hero text-uppercase fw-bold">Leia mais</a>
+      </div>
+    </div>
+  </header>
+
+    <section id="passeios" class="py-5 bg-light">
+    <div class="container">
+    <h2 class="titulo-secao mb-4">Passeios</h2>
+
+    <div class="row g-4 justify-content-center">
+        <div class="col-12 col-sm-6 col-lg-3">
+          <figure class="card-passeio">
+            <img src="img/canoagem.jpg" alt="Canoagem" class="img-fluid">
+            <figcaption>Canoagem</figcaption>
+          </figure>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <figure class="card-passeio">
+            <img src="img/passeioradical.jpg" alt="Passeio Radical" class="img-fluid">
+            <figcaption>Passeio Radical</figcaption>
+          </figure>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <figure class="card-passeio">
+            <img src="img/trilha.jpg" alt="Trilhas" class="img-fluid">
+            <figcaption>Trilhas</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section id="precos" class="py-5 secao-valores">
+    <div class="container">
+    <h2 class="titulo-secao mb-4">Valores</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <table class="table table-bordered border-dark text-center tabela-valores mb-0">
+    <thead>
+    <tr>
+    <th>Passeios</th>
+    <th>Valores</th>
+    </tr>
+    </thead>
+    <tbody>
+
+        <tr><td>Canoagem</td><td>R$ 60,00</td></tr>
+              <tr><td>Passeio Radical</td><td>R$ 80,00</td></tr>
+              <tr><td>Trilhas</td><td>R$ 90,00</td></tr>
+              <tr><td colspan="2" class="fw-bold">Consulte na recepção os valores atualizados</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <footer id="contato" class="rodape py-2 text-white">
+    <div class="container d-flex justify-content-center align-items-center gap-3">
+      <a href="https://wa.me/5519992124943" target="_blank" class="text-white" aria-label="WhatsApp">
+        <img src="img/icone.whats.png" alt="whats" class="whats">
+      </a>
+      <span class="fs-4 fw-semibold">Contato: (19) 992124943</span>
+    </div>
+  </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

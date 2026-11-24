@@ -1,0 +1,84 @@
+:root {
+  --laranja: #c8610f;
+  --bege: #f8e8d5;
+  --marrom: #7b3f00;
+  --cinza-tabela: #d9d9d9;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* HERO */
+.hero {
+  background-color: #2f5d3a; /* cor de reserva, caso a foto falhe */
+  background-image:
+  linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.466)),
+  url("img/hero.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 400px;
+}
+
+.logo { height: 120px; width: auto; margin-left: -250px;}
+
+.menu-link {
+  color: #fff !important;
+  font-weight: 600;
+  border: 1px solid #ffffff;
+  padding: 2px 8px !important;
+}
+.menu-link.active {
+  background-color: #ffffff;
+  color: #000000 !important;
+  border-color: #ffffff;
+}
+.hero-content{
+  padding: 40px 0 60px;
+  padding-top: 200px;
+}
+.btn-hero{
+  min-width: 140px;
+  border-width: 2px;
+  background: transparent;
+}
+.titulo-secao{
+  font-size: 20px;
+  margin-left: -290px;
+  margin-top: -30px;
+}
+.card-passeio{
+  margin: 0;
+  border: 2px solid #222;
+  box-shadow:2px 3px 4px rgba(0, 0, 0, 0.178);
+  background: #fff
+}
+.card-passeio img{
+  display: block;
+  object-fit: cover;
+}
+.card-passeio figcaption{
+  background: var(--laranja);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  padding: 1px 0;
+}
+
+.secao-valores{
+  background: var(--bege);
+}
+
+.tabela-valores th, .tabela-valores td{
+  background: var(--cinza-tabela);
+}
+
+.rodape{
+  background: var(--marrom);
+}
+
+.whats{
+  height: 60px;
+}
